@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aprende los fundamentos de Business Intelligence y explora un dashboard interactivo de finanzas personales.">
+    <title>BI en tu día a día | Aprende y analiza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top site-nav">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio" aria-label="BI en tu día a día, inicio">
+          <span class="brand-mark" aria-hidden="true">bi</span>
+          <span>BI <span class="brand-muted">en tu día a día</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <div class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <a class="nav-link" href="#fundamentos">Fundamentos</a>
+            <a class="nav-link" href="#dashboard">Dashboard</a>
+            <a class="btn btn-nav ms-lg-2" href="#cuestionario">Poner a prueba lo aprendido <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="inicio">
+      <section class="hero-section">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+              <span class="eyebrow"><span class="eyebrow-dot"></span> Aprende · Explora · Decide mejor</span>
+              <h1>Los datos también pueden trabajar <span>para ti.</span></h1>
+              <p class="hero-copy">Descubre cómo Business Intelligence transforma información cotidiana en decisiones más claras. Empieza con lo esencial y llévalo a tus finanzas personales.</p>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <a class="btn btn-primary btn-lg" href="#fundamentos">Explorar fundamentos <span aria-hidden="true">↓</span></a>
+                <a class="btn btn-outline-primary btn-lg" href="#dashboard">Ver dashboard</a>
+              </div>
+              <div class="hero-note"><span class="note-icon" aria-hidden="true">✦</span> Sin tecnicismos. Con ejemplos de la vida real.</div>
+            </div>
+            <div class="col-lg-5">
+              <div class="hero-visual" aria-label="Ilustración de indicadores y una gráfica ascendente">
+                <div class="visual-topline"><span>RESUMEN DE UN VISTAZO</span><span class="live-dot">● En control</span></div>
+                <div class="visual-amount">$2,480 <span>+12.8%</span></div>
+                <div class="visual-caption">Balance este mes</div>
+                <div class="visual-chart" aria-hidden="true">
+                  <div class="chart-y-labels"><span>$3k</span><span>$2k</span><span>$1k</span></div>
+                  <div class="chart-bars">
+                    <i style="--bar: 36%"></i><i style="--bar: 51%"></i><i style="--bar: 44%"></i><i style="--bar: 67%"></i><i style="--bar: 59%"></i><i style="--bar: 82%"></i><i class="bar-current" style="--bar: 94%"></i>
+                  </div>
+                </div>
+                <div class="chart-x-labels" aria-hidden="true"><span>Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Sep</span><span>Oct</span></div>
+                <div class="visual-footer"><span><i class="legend-dot income-dot"></i> Ingresos</span><span><i class="legend-dot expense-dot"></i> Gastos</span><span class="visual-insight">Una decisión a la vez <b>↗</b></span></div>
+                <div class="floating-card"><span class="floating-icon">↗</span><span><b>Vas por buen camino</b><small>Ahorraste 18% este mes</small></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad intro-section" id="fundamentos">
+        <div class="container">
+          <div class="section-heading text-center">
+            <span class="section-kicker">01 — LOS FUNDAMENTOS</span>
+            <h2>Entender tus datos cambia <span>lo que puedes decidir.</span></h2>
+            <p>Business Intelligence (BI) convierte los datos en información útil para comprender qué pasa y elegir qué hacer después.</p>
+          </div>
+          <div class="row g-4 mt-2">
+            <div class="col-lg-6">
+              <article class="concept-card h-100">
+                <div class="concept-icon icon-blue" aria-hidden="true">↗</div>
+                <span class="card-eyebrow">CONCEPTO 01</span>
+                <h3>Decisiones basadas en datos</h3>
+                <p>En vez de confiar solo en la intuición, observas evidencia, encuentras patrones y comparas opciones. Los datos no deciden por ti: te dan contexto para decidir mejor.</p>
+                <div class="example-box">
+                  <span class="example-label">EN EL DÍA A DÍA</span>
+                  <p>¿Sientes que gastas demasiado en comida a domicilio? Revisa tus gastos por categoría y compáralos con meses anteriores. Un patrón visible te ayuda a definir un límite realista.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-lg-6">
+              <article class="concept-card h-100">
+                <div class="concept-icon icon-violet" aria-hidden="true">⇢</div>
+                <span class="card-eyebrow">CONCEPTO 02</span>
+                <h3>El proceso ETL</h3>
+                <p>ETL reúne tres pasos para preparar datos antes de analizarlos: <strong>Extraer</strong> de sus fuentes, <strong>Transformar</strong> para ordenarlos y validarlos, y <strong>Cargar</strong> en un lugar listo para consultar.</p>
+                <div class="etl-steps" aria-label="Pasos de ETL">
+                  <div><b>01</b><span>Extraer</span><small>Recibos y banco</small></div><i aria-hidden="true">→</i>
+                  <div><b>02</b><span>Transformar</span><small>Limpiar y clasificar</small></div><i aria-hidden="true">→</i>
+                  <div><b>03</b><span>Cargar</span><small>Ver el resumen</small></div>
+                </div>
+                <div class="example-box">
+                  <span class="example-label">ETL CON TUS GASTOS</span>
+                  <p>Importas movimientos, unificas fechas y nombres (por ejemplo, “super” y “supermercado”) y cargas todo en un dashboard. Así comparas categorías sin contar a mano.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="insight-strip mt-4"><span class="insight-spark" aria-hidden="true">✳</span><p><strong>En pocas palabras:</strong> ETL prepara los datos; BI te ayuda a encontrarles sentido y convertir ese sentido en acción.</p></div>
+        </div>
+      </section>
+
+      <section class="section-pad quiz-section" id="cuestionario">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">RETO RÁPIDO</span>
+            <h2>¿Qué tanto se te quedó?</h2>
+            <p>Responde cinco preguntas y recibe retroalimentación al instante.</p>
+          </div>
+          <div class="quiz-card">
+            <div class="quiz-progress-row">
+              <div><span class="quiz-label">TU PROGRESO</span><span class="quiz-count" id="quiz-count">Pregunta 1 de 5</span></div>
+              <div class="score-pill" aria-live="polite">Puntaje <strong id="quiz-score">0</strong></div>
+            </div>
+            <div class="progress quiz-progress" role="progressbar" aria-label="Progreso del cuestionario" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0">
+              <div class="progress-bar" id="quiz-progress-bar" style="width: 0%"></div>
+            </div>
+            <div id="quiz-question-area" aria-live="polite"></div>
+            <div class="quiz-feedback" id="quiz-feedback" role="status" aria-live="polite" hidden></div>
+            <div class="quiz-actions"><span class="quiz-hint" id="quiz-hint">Selecciona una opción para continuar.</span><button class="btn btn-primary" id="quiz-next" type="button" disabled>Comprobar respuesta <span aria-hidden="true">→</span></button></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad dashboard-section" id="dashboard">
+        <div class="container">
+          <div class="dashboard-heading">
+            <div>
+              <span class="section-kicker">02 — DE LA TEORÍA A LA PRÁCTICA</span>
+              <h2>Tus finanzas, <span>más claras.</span></h2>
+              <p>Un ejemplo de cómo BI puede ayudarte a entender y organizar tu dinero.</p>
+            </div>
+            <label class="month-control">PERIODO
+              <select class="form-select" id="month-select" aria-label="Seleccionar mes"></select>
+            </label>
+          </div>
+
+          <div class="row g-3 kpi-row" id="kpi-cards"></div>
+
+          <div class="row g-4 dashboard-charts">
+            <div class="col-lg-7">
+              <article class="chart-card h-100">
+                <div class="chart-card-heading">
+                  <div><span class="chart-eyebrow">EN QUÉ SE VA TU DINERO</span><h3>Gastos por categoría</h3></div>
+                  <span class="chart-unit">Este mes · MXN</span>
+                </div>
+                <div class="chart-container chart-tall"><canvas id="category-chart" role="img" aria-label="Gráfica de barras de gastos por categoría"></canvas></div>
+              </article>
+            </div>
+            <div class="col-lg-5">
+              <article class="chart-card h-100">
+                <div class="chart-card-heading">
+                  <div><span class="chart-eyebrow">CÓMO SE DISTRIBUYE</span><h3>Presupuesto mensual</h3></div>
+                </div>
+                <div class="chart-container chart-doughnut"><canvas id="budget-chart" role="img" aria-label="Gráfica de dona con necesidades, deseos y ahorro"></canvas></div>
+                <div class="budget-legend" id="budget-legend"></div>
+                <p class="chart-footnote">Como referencia, la regla 50/30/20 sugiere destinar 50% a necesidades, 30% a deseos y 20% al ahorro.</p>
+              </article>
+            </div>
+            <div class="col-12">
+              <article class="chart-card">
+                <div class="chart-card-heading">
+                  <div><span class="chart-eyebrow">LA TENDENCIA EN EL TIEMPO</span><h3>Ingresos vs. gastos</h3></div>
+                  <div class="trend-legend"><span><i class="legend-dot income-dot"></i> Ingresos</span><span><i class="legend-dot expense-dot"></i> Gastos</span></div>
+                </div>
+                <div class="chart-container chart-history"><canvas id="history-chart" role="img" aria-label="Gráfica de líneas de ingresos y gastos de seis meses"></canvas></div>
+              </article>
+            </div>
+          </div>
+          <div class="data-note"><span aria-hidden="true">ⓘ</span> Datos simulados para fines educativos. No representan información financiera real.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
+        <a class="footer-brand" href="#inicio">BI <span>en tu día a día</span></a>
+        <p>Aprender de tus datos es el primer paso para decidir con intención.</p>
+        <span>© 2026 · Proyecto educativo</span>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
