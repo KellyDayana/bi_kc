@@ -76,6 +76,9 @@
   const quizHint = document.querySelector("#quiz-hint");
   const quizProgressBar = document.querySelector("#quiz-progress-bar");
   const quizProgress = document.querySelector(".quiz-progress");
+  const themeToggle = document.querySelector("#theme-toggle");
+  const themeToggleIcon = document.querySelector("#theme-toggle-icon");
+  const themeToggleLabel = document.querySelector("#theme-toggle-label");
   let questionIndex = 0;
   let score = 0;
   let answered = false;
@@ -180,6 +183,8 @@
   });
 
   const monthSelect = document.querySelector("#month-select");
+  const printPeriod = document.querySelector("#print-period");
+  const exportPdf = document.querySelector("#export-pdf");
   const kpiCards = document.querySelector("#kpi-cards");
   const budgetLegend = document.querySelector("#budget-legend");
   const chartColors = {
@@ -191,6 +196,59 @@
   const latestMonth = data.months[data.months.length - 1];
   let categoryChart;
   let budgetChart;
+  let historyChart;
+  let themeBeforePrint;
+
+  function getChartTheme() {
+    const styles = getComputedStyle(document.documentElement);
+    return {
+      label: styles.getPropertyValue("--chart-label").trim(),
+      grid: styles.getPropertyValue("--chart-grid").trim(),
+      center: styles.getPropertyValue("--navy").trim(),
+      point: styles.getPropertyValue("--surface").trim()
+    };
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    const isDark = theme === "dark";
+    themeToggle.setAttribute("aria-pressed", String(isDark));
+    themeToggle.setAttribute("aria-label", `Cambiar a tema ${isDark ? "claro" : "oscuro"}`);
+    themeToggleIcon.textContent = isDark ? "☀" : "☾";
+    themeToggleLabel.textContent = `Modo ${isDark ? "claro" : "oscuro"}`;
+  }
+
+  const savedTheme = localStorage.getItem("theme") || "light";
+  applyTheme(savedTheme === "dark" ? "dark" : "light");
+
+  themeToggle.addEventListener("click", () => {
+    const theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", theme);
+    applyTheme(theme);
+    renderDashboard(monthSelect.value);
+    renderHistoryChart();
+  });
+
+  window.addEventListener("beforeprint", () => {
+    if (themeBeforePrint !== undefined) return;
+    themeBeforePrint = document.documentElement.dataset.theme;
+    if (themeBeforePrint === "dark") {
+      applyTheme("light");
+      renderDashboard(monthSelect.value);
+      renderHistoryChart();
+    }
+  });
+
+  window.addEventListener("afterprint", () => {
+    if (themeBeforePrint === "dark") {
+      applyTheme("dark");
+      renderDashboard(monthSelect.value);
+      renderHistoryChart();
+    }
+    themeBeforePrint = undefined;
+  });
+
+  exportPdf.addEventListener("click", () => window.print());
 
   data.months.forEach((month) => {
     const option = document.createElement("option");
@@ -199,6 +257,7 @@
     monthSelect.append(option);
   });
   monthSelect.value = latestMonth.id;
+  printPeriod.textContent = latestMonth.label;
 
   function getMonthExpenses(month) {
     return Object.values(month.categories).reduce((total, amount) => total + amount, 0);
@@ -227,6 +286,7 @@
 
   function renderCategoryChart(month) {
     const context = document.querySelector("#category-chart");
+    const theme = getChartTheme();
     if (categoryChart) categoryChart.destroy();
     categoryChart = new Chart(context, {
       type: "bar",
@@ -248,11 +308,11 @@
           tooltip: { callbacks: { label: (context) => ` ${formatCurrency(context.parsed.y)}` } }
         },
         scales: {
-          x: { grid: { display: false }, ticks: { color: "#8290a3", font: { family: "DM Sans", size: 10 } }, border: { display: false } },
+          x: { grid: { display: false }, ticks: { color: theme.label, font: { family: "DM Sans", size: 10 } }, border: { display: false } },
           y: {
             beginAtZero: true,
-            grid: { color: "#edf1f6" },
-            ticks: { color: "#99a5b3", font: { family: "DM Sans", size: 9 }, callback: (value) => `$${Number(value) / 1000}k` },
+            grid: { color: theme.grid },
+            ticks: { color: theme.label, font: { family: "DM Sans", size: 9 }, callback: (value) => `$${Number(value) / 1000}k` },
             border: { display: false }
           }
         }
@@ -262,6 +322,7 @@
 
   function renderBudgetChart(month) {
     const context = document.querySelector("#budget-chart");
+    const theme = getChartTheme();
     const total = month.needs + month.wants + month.savings;
     const values = [month.needs, month.wants, month.savings];
     const labels = ["Necesidades", "Deseos", "Ahorro"];
@@ -290,10 +351,10 @@
           const centerY = (chartArea.top + chartArea.bottom) / 2;
           ctx.save();
           ctx.textAlign = "center";
-          ctx.fillStyle = "#12243a";
+          ctx.fillStyle = theme.center;
           ctx.font = "800 18px Manrope, sans-serif";
           ctx.fillText(`${percentFormatter.format((month.savings / month.income) * 100)}%`, centerX, centerY + 1);
-          ctx.fillStyle = "#91a0af";
+          ctx.fillStyle = theme.label;
           ctx.font = "10px 'DM Sans', sans-serif";
           ctx.fillText("ahorrado", centerX, centerY + 17);
           ctx.restore();
@@ -306,7 +367,9 @@
   }
 
   function renderHistoryChart() {
-    new Chart(document.querySelector("#history-chart"), {
+    const theme = getChartTheme();
+    if (historyChart) historyChart.destroy();
+    historyChart = new Chart(document.querySelector("#history-chart"), {
       type: "line",
       data: {
         labels: data.months.map((month) => month.shortLabel),
@@ -320,7 +383,7 @@
             tension: .35,
             pointRadius: 3,
             pointHoverRadius: 5,
-            pointBackgroundColor: "#fff",
+            pointBackgroundColor: theme.point,
             pointBorderWidth: 2
           },
           {
@@ -332,7 +395,7 @@
             tension: .35,
             pointRadius: 3,
             pointHoverRadius: 5,
-            pointBackgroundColor: "#fff",
+            pointBackgroundColor: theme.point,
             pointBorderWidth: 2
           }
         ]
@@ -345,13 +408,13 @@
           tooltip: { callbacks: { label: (context) => ` ${context.dataset.label}: ${formatCurrency(context.parsed.y)}` } }
         },
         scales: {
-          x: { grid: { display: false }, ticks: { color: "#8290a3", font: { family: "DM Sans", size: 10 } }, border: { display: false } },
+          x: { grid: { display: false }, ticks: { color: theme.label, font: { family: "DM Sans", size: 10 } }, border: { display: false } },
           y: {
             beginAtZero: false,
             suggestedMin: 10000,
             suggestedMax: 40000,
-            grid: { color: "#edf1f6" },
-            ticks: { color: "#99a5b3", font: { family: "DM Sans", size: 9 }, callback: (value) => `$${Number(value) / 1000}k` },
+            grid: { color: theme.grid },
+            ticks: { color: theme.label, font: { family: "DM Sans", size: 9 }, callback: (value) => `$${Number(value) / 1000}k` },
             border: { display: false }
           }
         }
@@ -369,7 +432,10 @@
     renderBudgetChart(month);
   }
 
-  monthSelect.addEventListener("change", (event) => renderDashboard(event.target.value));
+  monthSelect.addEventListener("change", (event) => {
+    printPeriod.textContent = data.months.find((month) => month.id === event.target.value).label;
+    renderDashboard(event.target.value);
+  });
   renderQuestion();
   renderDashboard(latestMonth.id);
   renderHistoryChart();

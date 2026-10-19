@@ -12,6 +12,8 @@ python3 -m http.server 8000
 
 Abre el puerto 8000 en la pestaña **Ports** de Codespaces para explorar la página.
 
+En el dashboard, selecciona el periodo y pulsa **Exportar PDF**. En el diálogo de impresión del navegador, elige **Guardar como PDF** para descargar el informe.
+
 ## Estructura
 
 - `index.html`: contenido y estructura de las dos secciones.
