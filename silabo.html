@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sílabo de Sistemas de Información para la Inteligencia de Negocios: objetivos, unidades, carga horaria, evaluaciones y bibliografía.">
+    <meta name="theme-color" content="#10243d">
+    <title>Sílabo | Sistemas de Información para la Inteligencia de Negocios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/silabo.css">
+  </head>
+  <body class="syllabus-page">
+    <nav class="navbar navbar-expand-lg sticky-top syllabus-nav">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="BI en tu día a día, inicio">
+          <span class="syllabus-brand-mark" aria-hidden="true">bi</span>
+          <span>BI <span class="syllabus-brand-muted">en tu día a día</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#syllabusNav" aria-controls="syllabusNav" aria-expanded="false" aria-label="Abrir navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="syllabusNav">
+          <div class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <a class="nav-link" href="index.html#fundamentos">Fundamentos</a>
+            <a class="nav-link" href="index.html#dashboard">Dashboard</a>
+            <a class="nav-link active" href="silabo.html" aria-current="page">Sílabo</a>
+            <a class="btn syllabus-nav-cta ms-lg-2" href="#unidades">Explorar asignatura <i class="bi bi-arrow-down-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <header class="syllabus-hero" id="inicio">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+        <div class="container position-relative">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-8">
+              <div class="hero-kicker" data-aos="fade-up"><span class="hero-kicker-dot"></span> SÍLABO DE ASIGNATURA <span class="hero-kicker-line"></span> PAO 2026–2027</div>
+              <h1 data-aos="fade-up" data-aos-delay="100">Sistemas de Información para la <span>Inteligencia de Negocios</span></h1>
+              <p class="hero-description" data-aos="fade-up" data-aos-delay="200">Transforma datos en conocimiento y conocimiento en decisiones que generan impacto.</p>
+              <div class="hero-meta" data-aos="fade-up" data-aos-delay="300">
+                <div class="hero-meta-item"><i class="bi bi-mortarboard" aria-hidden="true"></i><span><small>CARRERA</small>Sistemas de Información</span></div>
+                <div class="hero-meta-item"><i class="bi bi-layers" aria-hidden="true"></i><span><small>CICLO</small>Octavo</span></div>
+                <div class="hero-meta-item"><i class="bi bi-person-workspace" aria-hidden="true"></i><span><small>DOCENTE</small>Luis Rene Quisaguano Collaguazo</span></div>
+              </div>
+              <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+                <a class="btn hero-primary-btn" href="#asignatura">Conoce la asignatura <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                <span class="hero-date"><i class="bi bi-calendar3" aria-hidden="true"></i> 12 oct 2026 <span aria-hidden="true">—</span> 21 feb 2027</span>
+              </div>
+            </div>
+            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="250">
+              <aside class="hero-glass-card" aria-label="Resumen del periodo académico">
+                <div class="glass-card-top"><span><i class="bi bi-broadcast-pin" aria-hidden="true"></i> PERIODO ACADÉMICO</span><span class="live-indicator">ACTIVO</span></div>
+                <div class="glass-date">2026 <span>/</span> 2027</div>
+                <div class="glass-progress"><span></span></div>
+                <div class="glass-range"><span>12 OCT 2026</span><span>21 FEB 2027</span></div>
+                <div class="glass-card-bottom"><div><strong>3</strong><span>unidades</span></div><i class="bi bi-arrow-up-right" aria-hidden="true"></i><div><strong>144</strong><span>horas</span></div></div>
+                <div class="glass-decoration" aria-hidden="true"><i class="bi bi-bar-chart-line"></i></div>
+              </aside>
+            </div>
+          </div>
+          <a class="hero-scroll" href="#asignatura" aria-label="Desplazarse a la sección sobre la asignatura"><span>DESLIZA PARA EXPLORAR</span><i class="bi bi-arrow-down" aria-hidden="true"></i></a>
+        </div>
+      </header>
+
+      <section class="syllabus-section about-section" id="asignatura">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-up">
+              <span class="section-eyebrow"><span>01</span> PROPÓSITO Y CONTEXTO</span>
+              <h2 class="section-title">De los datos a las <span>decisiones.</span></h2>
+              <p class="section-lead">Una asignatura para comprender cómo la inteligencia de negocios conecta tecnología, análisis y estrategia empresarial.</p>
+              <div class="about-copy-block">
+                <div class="copy-icon"><i class="bi bi-journal-richtext" aria-hidden="true"></i></div>
+                <div><h3>Sobre la asignatura</h3><p>La asignatura se orienta al análisis de los principales conceptos relacionados con los fundamentos, características y modelamiento de la inteligencia de negocios para apoyar en la toma de decisiones empresariales basadas en información derivada del procesamiento de datos.</p></div>
+              </div>
+              <div class="about-copy-block objective-block">
+                <div class="copy-icon"><i class="bi bi-bullseye" aria-hidden="true"></i></div>
+                <div><h3>Objetivo general</h3><p>Analizar los principales conceptos relacionados con los fundamentos, características y modelamiento de la inteligencia de negocios con la finalidad entender la forma de cómo implementar este tipo de herramientas dentro de una organización.</p></div>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="120">
+              <div class="about-visual">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85" alt="Visualización de datos y métricas en un dashboard de analítica" loading="lazy">
+                <div class="image-shade"></div>
+                <div class="image-caption"><span class="caption-icon"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i></span><div><strong>Información que impulsa</strong><small>Una mirada estratégica a los datos</small></div></div>
+                <div class="visual-stat"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i><span><strong>BI</strong><small>Analizar · Comprender · Decidir</small></span></div>
+                <span class="visual-index">ANÁLISIS / 01</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hours-section" id="carga-horaria">
+        <div class="container">
+          <div class="section-heading text-center" data-aos="fade-up">
+            <span class="section-eyebrow section-eyebrow-centered"><span>02</span> TIEMPO PARA APRENDER</span>
+            <h2 class="section-title">Una carga equilibrada para <span>aprender haciendo.</span></h2>
+            <p>Horas distribuidas entre acompañamiento docente, práctica y trabajo autónomo.</p>
+          </div>
+          <div class="row g-3 hours-grid">
+            <div class="col-6 col-lg">
+              <article class="hour-card hour-card-total" data-aos="fade-up">
+                <span class="hour-icon"><i class="bi bi-clock-history" aria-hidden="true"></i></span>
+                <span class="hour-number"><span data-count="144">0</span><small>hrs</small></span>
+                <span class="hour-label">Carga total</span>
+                <span class="hour-card-note">Durante el periodo</span>
+              </article>
+            </div>
+            <div class="col-6 col-lg">
+              <article class="hour-card" data-aos="fade-up" data-aos-delay="70">
+                <span class="hour-icon"><i class="bi bi-person-video3" aria-hidden="true"></i></span>
+                <span class="hour-number"><span data-count="48">0</span><small>hrs</small></span>
+                <span class="hour-label">Docencia</span>
+                <span class="hour-card-note">Aprendizaje guiado</span>
+              </article>
+            </div>
+            <div class="col-6 col-lg">
+              <article class="hour-card" data-aos="fade-up" data-aos-delay="140">
+                <span class="hour-icon"><i class="bi bi-pc-display" aria-hidden="true"></i></span>
+                <span class="hour-number"><span data-count="48">0</span><small>hrs</small></span>
+                <span class="hour-label">Prácticas</span>
+                <span class="hour-card-note">Experimentar y construir</span>
+              </article>
+            </div>
+            <div class="col-6 col-lg">
+              <article class="hour-card" data-aos="fade-up" data-aos-delay="210">
+                <span class="hour-icon"><i class="bi bi-book-half" aria-hidden="true"></i></span>
+                <span class="hour-number"><span data-count="48">0</span><small>hrs</small></span>
+                <span class="hour-label">Autónomas</span>
+                <span class="hour-card-note">Estudio independiente</span>
+              </article>
+            </div>
+            <div class="col-12 col-lg">
+              <article class="hour-card hour-card-credits" data-aos="fade-up" data-aos-delay="280">
+                <span class="hour-icon"><i class="bi bi-award" aria-hidden="true"></i></span>
+                <span class="hour-number"><span data-count="3">0</span><small>créditos</small></span>
+                <span class="hour-label">Créditos</span>
+                <span class="hour-card-note">Formación académica</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="syllabus-section units-section" id="unidades">
+        <div class="container">
+          <div class="units-heading" data-aos="fade-up">
+            <div><span class="section-eyebrow"><span>03</span> RUTA DE APRENDIZAJE</span><h2 class="section-title">Tres unidades. <span>Una visión integral.</span></h2></div>
+            <p>Avanza desde los fundamentos de BI hasta la construcción de soluciones para la toma de decisiones.</p>
+          </div>
+          <div class="unit-timeline">
+            <article class="unit-card" data-aos="fade-up">
+              <div class="unit-marker"><span>01</span><i class="bi bi-diagram-3" aria-hidden="true"></i></div>
+              <div class="unit-card-content">
+                <div class="unit-meta"><span>UNIDAD 01</span><span>FUNDAMENTOS</span></div>
+                <h3>Fundamentos y Gestión de la Inteligencia de Negocios</h3>
+                <p>Comprende el ecosistema de BI, sus componentes y el papel de los sistemas de información en las organizaciones.</p>
+                <div class="topic-list"><span>Conceptos básicos</span><span>Componentes de BI</span><span>Sistemas de información</span><span>Herramientas de BI</span></div>
+                <div class="methodology"><i class="bi bi-people" aria-hidden="true"></i><span><small>METODOLOGÍA</small>Aprendizaje Cooperativo</span></div>
+              </div>
+              <span class="unit-index" aria-hidden="true">01</span>
+            </article>
+            <article class="unit-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="unit-marker"><span>02</span><i class="bi bi-database-check" aria-hidden="true"></i></div>
+              <div class="unit-card-content">
+                <div class="unit-meta"><span>UNIDAD 02</span><span>GESTIÓN DEL CONOCIMIENTO</span></div>
+                <h3>Sistemas de Soporte a la Administración y Data Warehouse</h3>
+                <p>Explora cómo las estructuras de datos y el conocimiento organizacional apoyan el análisis y la gestión.</p>
+                <div class="topic-list"><span>Variables de medición</span><span>Data Warehouse</span><span>Gestión del conocimiento</span><span>Patrones</span></div>
+                <div class="methodology"><i class="bi bi-puzzle" aria-hidden="true"></i><span><small>METODOLOGÍA</small>Aprendizaje Basado en Problemas</span></div>
+              </div>
+              <span class="unit-index" aria-hidden="true">02</span>
+            </article>
+            <article class="unit-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="unit-marker"><span>03</span><i class="bi bi-speedometer2" aria-hidden="true"></i></div>
+              <div class="unit-card-content">
+                <div class="unit-meta"><span>UNIDAD 03</span><span>DECISIONES EMPRESARIALES</span></div>
+                <h3>Sistema de Soporte para Toma de Decisiones Empresariales</h3>
+                <p>Diseña soluciones de análisis que reúnen procesos ETL, perspectivas multidimensionales e indicadores de desempeño.</p>
+                <div class="topic-list"><span>Vistas multidimensionales</span><span>Procesos ETL</span><span>Dashboards y KPIs</span></div>
+                <div class="methodology"><i class="bi bi-kanban" aria-hidden="true"></i><span><small>METODOLOGÍA</small>Aprendizaje Basado en Proyectos</span></div>
+              </div>
+              <span class="unit-index" aria-hidden="true">03</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="evaluation-section" id="evaluaciones">
+        <div class="container">
+          <div class="evaluation-heading" data-aos="fade-up">
+            <div><span class="section-eyebrow"><span>04</span> AGENDA ACADÉMICA</span><h2 class="section-title">Fechas para tener <span>en el radar.</span></h2></div>
+            <div class="calendar-stamp"><i class="bi bi-calendar2-check" aria-hidden="true"></i><span>PAO<br><strong>2026—27</strong></span></div>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-4" data-aos="fade-up">
+              <article class="evaluation-card evaluation-card-first">
+                <span class="evaluation-top"><i class="bi bi-calendar-event" aria-hidden="true"></i> EVALUACIÓN 01 <i class="bi bi-arrow-up-right evaluation-arrow" aria-hidden="true"></i></span>
+                <strong class="evaluation-date"><span>22</span> / 11</strong>
+                <span class="evaluation-year">NOVIEMBRE <b>2026</b></span>
+                <span class="evaluation-status"><i></i> PRIMER CORTE</span>
+              </article>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <article class="evaluation-card">
+                <span class="evaluation-top"><i class="bi bi-calendar-event" aria-hidden="true"></i> EVALUACIÓN 02 <i class="bi bi-arrow-up-right evaluation-arrow" aria-hidden="true"></i></span>
+                <strong class="evaluation-date"><span>10</span> / 01</strong>
+                <span class="evaluation-year">ENERO <b>2027</b></span>
+                <span class="evaluation-status"><i></i> SEGUNDO CORTE</span>
+              </article>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+              <article class="evaluation-card">
+                <span class="evaluation-top"><i class="bi bi-calendar-event" aria-hidden="true"></i> EVALUACIÓN 03 <i class="bi bi-arrow-up-right evaluation-arrow" aria-hidden="true"></i></span>
+                <strong class="evaluation-date"><span>14</span> / 02</strong>
+                <span class="evaluation-year">FEBRERO <b>2027</b></span>
+                <span class="evaluation-status"><i></i> CIERRE DE CICLO</span>
+              </article>
+            </div>
+          </div>
+          <p class="evaluation-note"><i class="bi bi-info-circle" aria-hidden="true"></i> Las fechas corresponden al calendario académico del PAO indicado.</p>
+        </div>
+      </section>
+
+      <section class="syllabus-section skills-section" id="habilidades">
+        <div class="container">
+          <div class="section-heading text-center" data-aos="fade-up">
+            <span class="section-eyebrow section-eyebrow-centered"><span>05</span> MÁS ALLÁ DE LO TÉCNICO</span>
+            <h2 class="section-title">Habilidades que <span>potencian tus ideas.</span></h2>
+            <p>Competencias para colaborar, cuestionar y convertir oportunidades en soluciones.</p>
+          </div>
+          <div class="row g-3 skills-grid">
+            <div class="col-6 col-lg-3" data-aos="zoom-in"><article class="skill-card"><div class="skill-icon skill-blue"><i class="bi bi-cloud-arrow-up" aria-hidden="true"></i></div><h3>Competencia digital</h3><p>Usar tecnologías y datos con criterio.</p><span>01 / CONECTAR</span></article></div>
+            <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="80"><article class="skill-card"><div class="skill-icon skill-yellow"><i class="bi bi-lightbulb" aria-hidden="true"></i></div><h3>Creatividad</h3><p>Imaginar nuevas formas de resolver.</p><span>02 / IDEAR</span></article></div>
+            <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="160"><article class="skill-card"><div class="skill-icon skill-purple"><i class="bi bi-brain" aria-hidden="true"></i></div><h3>Pensamiento crítico</h3><p>Interpretar evidencia y preguntar mejor.</p><span>03 / ANALIZAR</span></article></div>
+            <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="240"><article class="skill-card"><div class="skill-icon skill-green"><i class="bi bi-people" aria-hidden="true"></i></div><h3>Liderazgo</h3><p>Colaborar para llevar ideas a la acción.</p><span>04 / IMPULSAR</span></article></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section" id="proyecto">
+        <div class="project-pattern" aria-hidden="true"></div>
+        <div class="container position-relative">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8" data-aos="fade-right">
+              <span class="project-eyebrow"><i class="bi bi-stars" aria-hidden="true"></i> PROYECTO INTEGRADOR</span>
+              <h2>PlasTrack: Monitoreo Inteligente de Microplásticos mediante Datos Copernicus</h2>
+              <p>La asignatura aporta al proyecto mediante la creación de dashboards y KPIs que organizan información ambiental y facilitan el seguimiento de indicadores clave.</p>
+              <a class="project-link" href="#materiales">Explorar recursos de aprendizaje <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="130">
+              <div class="project-art" aria-label="Visualización conceptual de datos ambientales">
+                <div class="project-ring ring-one"></div><div class="project-ring ring-two"></div><div class="project-ring ring-three"></div>
+                <span class="project-art-center"><i class="bi bi-globe-americas" aria-hidden="true"></i></span>
+                <span class="project-coordinate coordinate-one">0° 00' N</span>
+                <span class="project-coordinate coordinate-two">COPERNICUS DATA</span>
+                <span class="project-satellite"><i class="bi bi-broadcast" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="syllabus-section resources-section" id="materiales">
+        <div class="container">
+          <div class="resources-heading" data-aos="fade-up">
+            <div><span class="section-eyebrow"><span>06</span> PARA SEGUIR EXPLORANDO</span><h2 class="section-title">Material de apoyo <span>y bibliografía.</span></h2></div>
+            <p>Fuentes para consultar documentación, literatura académica y recursos técnicos.</p>
+          </div>
+          <div class="accordion resources-accordion" id="resourcesAccordion" data-aos="fade-up">
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingPowerBi"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePowerBi" aria-expanded="true" aria-controls="collapsePowerBi"><span class="resource-icon resource-blue"><i class="bi bi-bar-chart-line" aria-hidden="true"></i></span><span class="resource-title">Documentación oficial de Power BI<small>Guías, aprendizaje y referencia de la plataforma</small></span><i class="bi bi-arrow-up-right resource-arrow" aria-hidden="true"></i></button></h3>
+              <div id="collapsePowerBi" class="accordion-collapse collapse show" aria-labelledby="headingPowerBi" data-bs-parent="#resourcesAccordion"><div class="accordion-body"><p>Consulta la documentación y las rutas de aprendizaje oficiales para crear modelos, informes y visualizaciones en Power BI.</p><a href="https://learn.microsoft.com/es-es/power-bi/" target="_blank" rel="noopener noreferrer">Abrir Microsoft Learn <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingElibro"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseElibro" aria-expanded="false" aria-controls="collapseElibro"><span class="resource-icon resource-purple"><i class="bi bi-book" aria-hidden="true"></i></span><span class="resource-title">Libros académicos en eLibro<small>Bibliografía digital para consulta universitaria</small></span><i class="bi bi-arrow-up-right resource-arrow" aria-hidden="true"></i></button></h3>
+              <div id="collapseElibro" class="accordion-collapse collapse" aria-labelledby="headingElibro" data-bs-parent="#resourcesAccordion"><div class="accordion-body"><p>Accede al catálogo de eLibro para localizar lecturas sobre inteligencia de negocios, sistemas de soporte a decisiones, gestión de datos y data warehouses. El acceso puede requerir credenciales institucionales.</p><a href="https://elibro.net/" target="_blank" rel="noopener noreferrer">Ir a eLibro <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingChartjs"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChartjs" aria-expanded="false" aria-controls="collapseChartjs"><span class="resource-icon resource-green"><i class="bi bi-graph-up" aria-hidden="true"></i></span><span class="resource-title">Visualización con Chart.js<small>Documentación técnica y recursos de la comunidad UTC</small></span><i class="bi bi-arrow-up-right resource-arrow" aria-hidden="true"></i></button></h3>
+              <div id="collapseChartjs" class="accordion-collapse collapse" aria-labelledby="headingChartjs" data-bs-parent="#resourcesAccordion"><div class="accordion-body"><p>La documentación oficial ofrece ejemplos y guías para construir gráficos. Para artículos, lecturas y recursos de la UTC, consulta el portal institucional y su biblioteca digital.</p><div class="resource-links"><a href="https://www.chartjs.org/docs/latest/" target="_blank" rel="noopener noreferrer">Documentación Chart.js <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a><a href="https://www.utc.edu.ec/" target="_blank" rel="noopener noreferrer">Portal de la UTC <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></div></div></div>
+            </div>
+          </div>
+          <div class="resources-footnote"><i class="bi bi-shield-check" aria-hidden="true"></i> Los enlaces externos se abren en una pestaña nueva. Verifica el acceso disponible con tu institución.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="syllabus-footer">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+        <a class="footer-brand" href="index.html"><span class="syllabus-brand-mark" aria-hidden="true">bi</span> BI <span>en tu día a día</span></a>
+        <p>Sistemas de Información para la Inteligencia de Negocios <span>·</span> PAO 2026–2027</p>
+        <a class="back-to-top" href="#inicio">Volver arriba <i class="bi bi-arrow-up" aria-hidden="true"></i></a>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/silabo.js"></script>
+  </body>
+</html>
